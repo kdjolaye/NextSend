@@ -2,11 +2,11 @@
 
 import { renderToBuffer } from "@react-pdf/renderer"
 import { contactSchema } from "@/app/lib/validations"
-import { ContactPDF } from "@/app/compoments/pdf/ContactPdf"
+import { ContactPDF } from "@/app/components/pdf/ContactPdf"
 import { Resend } from "resend"
 import React from "react"
 
-const resend = new Resend('re_HosQBiWu_M2VxTxVHZV84H8zy3E3NsNCo')
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 type ActionResult =
   | { success: true }
